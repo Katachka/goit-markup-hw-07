@@ -313,7 +313,7 @@ ul {
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
-.team-list .title {
+.team-card__title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
@@ -321,7 +321,7 @@ ul {
     margin-bottom: 10px;
 
 }
-.team-list .profession {
+.team-card__profession {
     font-size: 16px;
     line-height: 1.2;
     color: var(--color-primary);
@@ -372,7 +372,16 @@ ul {
     clip-path: inset(50%);
     margin: -1px;
 }
-.buttons { 
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filters__item:not(:last-child) {
+    margin-right: 8px;
+}
+.filters__button { 
     border: none;
     border-radius: 4px;
     padding: 6px 22px;
@@ -387,23 +396,12 @@ ul {
     color: var(--color-secondary);
     background-color: var(--color-background-team);
     cursor: pointer;
-    
-    
 }
-.buttons:hover,
-.buttons:focus {
+.filters__button:hover,
+.filters__button:focus {
     color: var(--color-white);
     background-color: var(--color-accent);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.buttons-list {
-   display: flex; 
-   justify-content: center;
-   margin-bottom: 50px;
-
-}
-.buttons-list .item:not(:last-child) {
-    margin-right: 8px;
 }
 
 .portfolio-list .title {
@@ -479,14 +477,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     border-top: none;
 }
 
-.clients-list {
+.clients {
     display: flex;
     gap: 30px;
 }
-.clients-item {
+.clients__item {
     width: calc((100% - 150px) / 6);
 }
-.clients-link {
+.clients__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,10 +496,10 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     
     transition: color 250ms var(--timing-function), fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
-.client-icon {
+.client__icon {
     fill: currentColor;
 }
-.clients-link:hover, .clients-link:focus {
+.clients__link:hover, .clients__link:focus {
     color: var(--color-accent);
     border-color: var(--color-accent);
 }
@@ -514,7 +512,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     background-color: var(--color-background-footer);
     padding: 60px 0;
 }
-
+.footer-page {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+}
 .logo-footer {
     display: block;
     margin-bottom: 20px;
@@ -529,21 +531,20 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 .logo-white {
     color: var(--color-white);
 } 
-.contacts-foo .item:not(:last-child) {
+.contacts-foo__item:not(:last-child) {
     margin-bottom: 9px;
 
 }
-.contacts-foo .address {
+.contacts-foo__address {
     font-style:normal;
     color: var(--color-white);
     line-height: 1.7;
     text-decoration: none;
 
     transition: color 250ms var(--timing-function);
-   
 }
 
-.contacts-foo .contacts {
+.contacts-foo__contacts {
     display: block;
     font-style: normal;
     line-height: 1.7;
@@ -552,8 +553,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     transition: color 250ms var(--timing-function);
     
 }
-.contacts-foo .contacts:hover,
-.contacts-foo .contacts:focus {
+.contacts-foo__contacts:hover,
+.contacts-foo__contacts:focus {
     color: var(--color-accent);
 }
 .footer-title {
@@ -566,7 +567,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     margin-bottom: 20px;
 }
 
-.social-link-foo {
+.social__link-foo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -578,22 +579,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     border-radius: 50%;
     color: var(--color-white);
 }
-.social-icon-foo {
+.social__icon-foo {
     fill: currentColor;
 }
 
-.social-link-foo:hover,
-.social-link-foo:focus {
+.social__link-foo:hover,
+.social__link-foo:focus {
     background-color: var(--color-accent);
     color: var(--color-white);
-}
-.footer-page {
-    display: flex;
-    align-items: baseline;
-    gap: 70px;
-}
-.footer-form {
-
 }
 
 .footer-subscribe {
@@ -605,7 +598,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 .subscribe-form {
   margin-left: 23px;
 }
-.email-footer {
+.footer-subscribe__email-footer {
     width: 358px;
     height: 50px;
     
@@ -621,7 +614,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-.subscribe-button {
+.footer-subscribe__subscribe-button {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -642,7 +635,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     color: var(--color-white);
     cursor: pointer;
 }
-.send {
+.footer-subscribe__icon {
     fill:var(--color-white);
 }
 
