@@ -1,12 +1,12 @@
 .contacts {
     display: flex;
-}
 
-.contacts__item:not(:last-child) {
+
+&__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.contacts__link {
+&__link {
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -21,13 +21,14 @@
     text-decoration: none;
 }
 
-.contacts__link:hover,
-.contacts__link:focus {
+&__link:hover,
+&__link:focus {
     color: var(--color-accent);
 }
 
-.contacts__icon {
+&__icon {
     fill: currentColor;
     margin-right: 10px;
     transition: fill 250ms var(--timing-function);
+}
 }

@@ -1,14 +1,14 @@
 .team {
     background-color: var(--color-background-team);
-}
 
-.team__list {
+
+&__list {
     display: flex;
     flex-basis: calc((100% - 90px) / 4);
     gap: 30px;
 }
 
-.team__box {
+&__box {
     padding: 30px 0;
     border-top: none;
     background-color: var(--color-background);
@@ -17,7 +17,7 @@
     text-align: center;
 }
 
-.team__name {
+&__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
@@ -26,9 +26,10 @@
 
 }
 
-.team__position {
+&__position {
     font-size: 16px;
     line-height: 1.2;
     color: var(--color-primary);
     margin-bottom: 16px;
+}
 }

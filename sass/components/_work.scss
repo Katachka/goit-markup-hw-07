@@ -1,18 +1,18 @@
 .work {
     padding-top: 0;
-}
 
-.work__list {
+
+&__list {
     display: flex;
     flex-basis: calc((100% - 60px) / 3);
     gap: 30px;
 }
 
-.work__item {
+&__item {
     position: relative;
 }
 
-.work__label {
+&__label {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -21,7 +21,7 @@
     height: 70px;
 }
 
-.work__text {
+&__text {
     text-align: center;
     padding: 27px 0;
     font-weight: 700;
@@ -30,4 +30,5 @@
     text-transform: uppercase;
     color: var(--color-white);
 
+}
 }
